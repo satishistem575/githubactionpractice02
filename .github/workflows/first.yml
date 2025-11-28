@@ -35,6 +35,7 @@ jobs:
       - name: define the env in step level
         env:
           STEP_1_ENV: step1env
+        run: echo "hello"
       - name: define the env in step 2 level
         env:
           STEP_2_ENV: step2env
