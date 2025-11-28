@@ -18,6 +18,8 @@ jobs:
         run: echo $JOB_OWNER
   job-2:
     runs-on: self-hosted
+    needs: 
+      - job-1
     env:
       JOB_OWNER_2: job2_env
     steps:
