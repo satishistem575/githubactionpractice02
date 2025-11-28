@@ -29,4 +29,14 @@ jobs:
         run: echo $JOB_OWNER
       - name: job 2 env runner
         run: echo $JOB_OWNER_2
-
+  job-3:
+    runs-on: self-hosted
+    steps:
+      - name: define the env in step level
+        env:
+          STEP_1_ENV: step1env
+      - name: define the env in step 2 level
+        env:
+          STEP_2_ENV: step2env
+        run: echo $STEP_1_ENV
+      
