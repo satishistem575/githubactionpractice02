@@ -1,0 +1,15 @@
+name: first workflow
+
+on:
+  push:
+    branches:
+      - main
+env:
+  WORKFLOW_OWNER: satishmishra
+jobs:
+  job-1:
+    runs-on: self-hosted
+    steps:
+      - name: Access env and print it
+        run: echo $WORKFLOW_OWNER
+
