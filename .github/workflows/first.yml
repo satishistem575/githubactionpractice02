@@ -9,7 +9,22 @@ env:
 jobs:
   job-1:
     runs-on: self-hosted
+    env:
+      JOB_OWNER: job1_env
     steps:
       - name: Access env and print it
         run: echo $WORKFLOW_OWNER
+      - name: Job 1 env runner
+        run: echo $JOB_OWNER
+  job-2:
+    runs-on: self-hosted
+    env:
+      JOB_OWNER_2: job2_env
+    steps:
+      - name: Access env for workflow and print it
+        run: echo $WORKFLOW_OWNER
+      - name: job 1 env runner
+        run: echo $JOB_OWNER
+      - name: job 2 env runner
+        run: echo $JOB_OWNER_2
 
